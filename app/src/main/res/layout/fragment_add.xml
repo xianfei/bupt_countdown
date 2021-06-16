@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="280dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        tools:context=".main.SortFragment">
+
+    <CheckedTextView
+            android:id="@+id/btn_add_new"
+            style="@style/CheckableButtonStyle"
+            android:layout_marginTop="8dp"
+            android:text="新建事件" />
+
+    <CheckedTextView
+            android:id="@+id/btn_add_QR"
+            style="@style/CheckableButtonStyle"
+            android:layout_marginTop="8dp"
+            android:text="扫码导入事件" />
+
+    <CheckedTextView
+            android:id="@+id/btn_add_url"
+            style="@style/CheckableButtonStyle"
+            android:layout_marginTop="8dp"
+            android:text="从URL导入事件" />
+
+    <CheckedTextView
+            android:id="@+id/btn_add_text"
+            style="@style/CheckableButtonStyle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="从剪贴板导入事件" />
+
+</LinearLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".event_add.AddEventActivity">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="效果预览"/>
+
+    <include
+            layout="@layout/item_event"/>
+
+    <TextView
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="选择类型"/>
+
+    <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_type"
+            app:singleSelection="true"
+            app:chipSpacingHorizontal="0dp"
+            app:chipSpacingVertical="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+                android:checkable="true"
+                android:textColor="@android:color/white"
+                app:chipBackgroundColor="@color/pink"
+                android:id="@+id/chip_commemoration"
+                android:layout_marginStart="16dp"
+                android:text="纪念日"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chip_birth"
+                android:textColor="@android:color/white"
+                app:chipBackgroundColor="@color/colorAccent"
+                android:checkable="true"
+                android:layout_marginStart="16dp"
+                android:text="生日"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chip_lunar_birth"
+                android:textColor="@android:color/white"
+                app:chipBackgroundColor="@color/orange"
+                android:checkable="true"
+                android:layout_marginStart="16dp"
+                android:text="农历生日"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.Chip
+                android:id="@+id/chip_rest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:checkable="true"
+                android:text="倒数日"
+                android:textColor="@android:color/white"
+                app:chipBackgroundColor="@color/blue_400" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+            android:layout_marginBottom="8dp"
+            android:alpha="0.5"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+        <TextView
+                android:id="@+id/tv_event_icon"
+                style="@style/IconTextViewStyle"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/blue"/>
+
+        <EditText
+                android:id="@+id/et_event"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:hint="寿星"
+                android:lines="1"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+        <TextView
+                style="@style/IconTextViewStyle"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/orange"/>
+
+        <TextView
+                android:id="@+id/et_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="出生日期"
+                android:lines="1"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_time"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackground">
+
+        <TextView
+                style="@style/IconTextViewStyle"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="#FFA622"/>
+
+        <TextView
+                android:id="@+id/et_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="周一    第1 - 2节"
+                android:lines="1"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+        <TextView
+                style="@style/IconTextViewStyle"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/lightBlue"/>
+
+        <EditText
+                android:id="@+id/et_msg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="备注"
+                android:lines="1"
+                android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/ll_fav"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+        <TextView
+                style="@style/IconTextViewStyle"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/red"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="24dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:text="置顶"
+                android:lines="1"
+                android:textSize="14sp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/s_fav"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            app:rippleColor="@color/red"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"
+            app:cornerRadius="64dp"
+            android:paddingStart="64dp"
+            android:paddingEnd="64dp"
+            app:strokeColor="@color/red"
+            android:textColor="@color/red"
+            android:text="长按删除事件"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
