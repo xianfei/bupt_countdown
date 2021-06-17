@@ -8,7 +8,7 @@
 
 ### 下载APK
 
-见[Release页面](https://github.com/xianfei/bupt_countdown/releases)
+见[Release页面](https://github.com/xianfei/bupt_countdown/releases)  或  [直接下载APK](https://github.com/xianfei/bupt_countdown/raw/main/app/normal/release/app-normal-release.apk)（app/normal/release/app-normal-release.apk）
 
 ### 特色
 
@@ -41,6 +41,10 @@
 ```事件名::类型::年::月::日::备注::图片URL```
 
 如：```test::0::2021::5::16::::```
+
+当有多个事件时请使用##分隔
+
+如：```test::0::2021::5::16::::##test2::0::2021::4::13::::```
 
 ### 关于分享
 
