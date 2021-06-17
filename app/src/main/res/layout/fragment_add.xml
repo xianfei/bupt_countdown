@@ -21,16 +21,17 @@
             android:text="扫码导入事件" />
 
     <CheckedTextView
-            android:id="@+id/btn_add_url"
-            style="@style/CheckableButtonStyle"
-            android:layout_marginTop="8dp"
-            android:text="从URL导入事件" />
-
-    <CheckedTextView
             android:id="@+id/btn_add_text"
             style="@style/CheckableButtonStyle"
             android:layout_marginTop="8dp"
+            android:text="从剪贴板导入事件"
+            android:visibility="gone" />
+
+    <CheckedTextView
+            android:id="@+id/btn_add_url"
+            style="@style/CheckableButtonStyle"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:text="从剪贴板导入事件" />
+            android:text="从URL导入事件" />
 
 </LinearLayout>

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "cn.edu.bupt.countdown",
+  "variantName": "processNormalReleaseResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 16,
+      "versionName": "3.0",
+      "outputFile": "app-normal-release.apk"
+    }
+  ]
+}

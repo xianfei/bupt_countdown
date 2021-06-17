@@ -62,7 +62,8 @@ class EventListAdapter(layoutResId: Int, data: MutableList<EventBean>) :
                     .with(item.path)
                     .intoCallBack {
                         val colorP = ColorPalette(it!!)
-                        helper.getView<TextView>(R.id.tv_content).setTextColor(colorP.getColor1())
+                        helper.getView<TextView>(R.id.tv_content).setTextColor(colorP.getColor1HC())
+//                        helper.getView<TextView>(R.id.tv_count).setTextColor(colorP.getColor1HC())
                         helper.getView<View>(R.id.v_bg).backgroundColor = colorP.getColor1BG()
                     }
             )

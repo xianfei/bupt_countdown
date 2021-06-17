@@ -38,6 +38,9 @@ import kotlinx.coroutines.withContext
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.longSnackbar
 import java.io.File
+import com.github.florent37.glidepalette.GlidePalette
+import cn.edu.bupt.countdown.utils.ColorPalette
+
 
 class ShareEventActivity : BaseTitleActivity() {
 
@@ -209,7 +212,7 @@ class ShareEventActivity : BaseTitleActivity() {
 
                     verticalLayout {
 
-                        imageView(R.drawable.ic_launcher_foreground) {
+                        imageView(R.drawable.ic_smileface) {
                             scaleType = ImageView.ScaleType.CENTER_CROP
                         }.lparams(dip(240), dip(240))
 
@@ -255,6 +258,14 @@ class ShareEventActivity : BaseTitleActivity() {
         Glide.with(this)
             .load(if (viewModel.selectedEvent!!.path.isBlank()) R.drawable.default_background else viewModel.selectedEvent!!.path)
             .override(600)
+            .listener(
+                GlidePalette
+                    .with(viewModel.selectedEvent!!.path)
+                    .intoCallBack {
+                        val colorP = ColorPalette(it!!)
+                        ll_share.backgroundColor = colorP.getColor1BG()
+                    }
+            )
             .into(iv_share)
     }
 

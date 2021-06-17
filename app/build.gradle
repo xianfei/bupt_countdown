@@ -6,8 +6,6 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
-apply plugin: 'io.fabric'
-
 apply plugin: 'kotlinx-serialization'
 
 android {
@@ -24,7 +22,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 16
-        versionName "2.18"
+        versionName "3.0"
         flavorDimensions "versionCode"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         renderscriptTargetApi 27
@@ -57,11 +55,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            zipAlignEnabled true
-            proguardFile 'proguard-android.txt'
-            proguardFile 'proguard-rules.pro'
+
         }
     }
 

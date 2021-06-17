@@ -237,7 +237,7 @@ class MainActivity : BaseActivity() {
 
                 verticalLayout {
 
-                    imageView(R.drawable.ic_launcher_foreground) {
+                    imageView(R.drawable.ic_smileface) {
                         scaleType = ImageView.ScaleType.CENTER_CROP
                     }.lparams(dip(240), dip(240))
 

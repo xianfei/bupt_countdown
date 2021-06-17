@@ -42,6 +42,18 @@ class ColorPalette(var colorPalette: Palette) {
         return Color.HSVToColor(hsv);
     }
 
+    fun getColor1HC():Int{
+        val hsv = FloatArray(3)
+        Color.colorToHSV(getColor1(),hsv)
+        if(hsv[1]<0.3f)
+            hsv[1] += 0.3f
+        else if (hsv[1]<0.7f) hsv[1] +=0.2f
+        if(hsv[2]>0.5f)
+            hsv[2] -= 0.15f
+        else if (hsv[2]>0.3f) hsv[2] = hsv[2]-0.05f
+        return Color.HSVToColor(hsv);
+    }
+
     fun getColor1():Int{
         return vibrantSwatch?.rgb ?: R.color.blue_400
     }

@@ -81,9 +81,9 @@ data class EventBean(
         return when (type) {
             0 -> {
                 if (PreferenceUtils.getBooleanFromSP(context, "s_day_plus", false)) {
-                    arrayOf("$content", "第 ${count + 1} 天", "${year}/${month + 1}/$day","纪念日")
+                    arrayOf("$content", "第 ${count + 1} 天", "纪念日：${year}/${month + 1}/$day","纪念日")
                 } else {
-                    arrayOf("$content", "已过 ${count} 天", "${year}/${month + 1}/$day","纪念日")
+                    arrayOf("$content", "已过 ${count} 天", "纪念日：${year}/${month + 1}/$day","纪念日")
                 }
             }
             1 -> {
@@ -100,9 +100,9 @@ data class EventBean(
             }
             3 -> {
                 if (count > 0) {
-                    arrayOf("${content}", "已过 ${count} 天", "时间：${year}/${month + 1}/$day","倒数日")
+                    arrayOf("${content}", "已过 ${count} 天", "倒数日：${year}/${month + 1}/$day","倒数日")
                 } else {
-                    arrayOf("${content}", "还有 ${-count} 天", "时间：${year}/${month + 1}/$day","已过倒数日")
+                    arrayOf("${content}", "还有 ${-count} 天", "倒数日：${year}/${month + 1}/$day","已过倒数日")
                 }
             }
             2 -> {
@@ -131,7 +131,7 @@ data class EventBean(
                 }
                 arrayOf(
                     "${content}的生日", "还有 $c 天",
-                    "对应阳历：${solarBirth.solarYear}/${solarBirth.solarMonth}/${solarBirth.solarDay}","${durYears}岁农历生日"
+                    "对应阳历生日：${solarBirth.solarYear}/${solarBirth.solarMonth}/${solarBirth.solarDay}","${durYears}岁农历生日"
                 )
             }
             else -> {

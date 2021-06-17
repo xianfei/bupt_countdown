@@ -88,3 +88,7 @@
 -keepclasseswithmembers class * {
     @androidx.annotation.Keep <init>(...);
 }
+-keep class android.support.v8.renderscript.** { *; }
+-keepclasseswithmembernames class * {
+native <methods>;
+}
